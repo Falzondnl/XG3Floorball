@@ -76,10 +76,12 @@ app.add_middleware(
 from api.routes.health import router as health_router
 from api.routes.matches import router as matches_router
 from api.routes.admin import router as admin_router
+from api.routes.fixtures import router as fixtures_router
 
 app.include_router(health_router)
 app.include_router(matches_router)
 app.include_router(admin_router)
+app.include_router(fixtures_router)
 
 
 @app.get("/")
