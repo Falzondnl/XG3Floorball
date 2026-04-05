@@ -5,6 +5,7 @@ Loads trained ensemble artefacts and serves P(home_win) predictions.
 """
 from __future__ import annotations
 
+import json
 import logging
 import pickle
 from dataclasses import dataclass, field
@@ -19,6 +20,33 @@ from ml.calibrator import FloorballCalibrator
 from ml.features import FEATURE_COLUMNS, FloorballFeatureExtractor
 
 logger = logging.getLogger(__name__)
+
+_ELO_STATE_PATH = MODELS_DIR / "r0" / "elo_state.json"
+
+
+def _load_team_elo_state() -> dict[int, float]:
+    """Load pre-computed team ELO from models/r0/elo_state.json.
+
+    Returns dict mapping team_id (int) -> float ELO rating.
+    Falls back to empty dict if file not present (caller defaults to ELO_DEFAULT).
+    """
+    if not _ELO_STATE_PATH.exists():
+        logger.warning("elo_state.json not found at %s — team ELO lookup unavailable", _ELO_STATE_PATH)
+        return {}
+    try:
+        with open(_ELO_STATE_PATH) as fh:
+            data = json.load(fh)
+        raw = data.get("team_elos", {})
+        result = {int(k): float(v) for k, v in raw.items()}
+        logger.info("Floorball ELO state loaded: %d teams from %s", len(result), _ELO_STATE_PATH)
+        return result
+    except Exception as exc:
+        logger.warning("Failed to load elo_state.json: %s — team ELO lookup disabled", exc)
+        return {}
+
+
+# Module-level singleton — loaded once at import time (same process lifetime as predictor)
+_TEAM_ELO: dict[int, float] = _load_team_elo_state()
 
 
 @dataclass
@@ -148,9 +176,20 @@ class FloorballPredictor:
 
         is_women_flag = 1 if inp.is_women else 0
 
-        # Use provided values or ELO default
-        home_elo = inp.home_elo if inp.home_elo is not None else ELO_DEFAULT
-        away_elo = inp.away_elo if inp.away_elo is not None else ELO_DEFAULT
+        # Use provided values, then elo_state.json lookup, then ELO default
+        if inp.home_elo is not None:
+            home_elo = inp.home_elo
+        else:
+            home_elo = _TEAM_ELO.get(inp.home_team_id, ELO_DEFAULT)
+            if home_elo == ELO_DEFAULT:
+                logger.debug("home_team_id=%d not in ELO state — using default %.0f", inp.home_team_id, ELO_DEFAULT)
+
+        if inp.away_elo is not None:
+            away_elo = inp.away_elo
+        else:
+            away_elo = _TEAM_ELO.get(inp.away_team_id, ELO_DEFAULT)
+            if away_elo == ELO_DEFAULT:
+                logger.debug("away_team_id=%d not in ELO state — using default %.0f", inp.away_team_id, ELO_DEFAULT)
 
         feat = {
             "elo_home_pre": home_elo,
