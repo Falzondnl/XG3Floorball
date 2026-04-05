@@ -42,12 +42,13 @@ class FloorballGradingEngine:
     All grades persisted to PostgreSQL.
     """
 
-    GRADE_MAP = {
+    def __init__(self):
+        self.GRADE_MAP = {
         "asian_handicap": self._grade_handicap,
         "moneyline": self._grade_outright,
         "total_over": self._grade_over,
         "total_under": self._grade_under,
-    }
+        }
 
     def grade_match(
         self, match_id: str, result: MatchResult, markets: List[Dict]
