@@ -27,9 +27,9 @@ import math
 import time
 import uuid
 from datetime import datetime, timezone
-from typing import Optional
+from typing import Dict, Optional
 
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 
 log = logging.getLogger(__name__)
@@ -40,6 +40,16 @@ router = APIRouter(prefix="/api/v1/floorball/live", tags=["live"])
 _REGULATION_SECONDS: float = 3600.0
 
 _EPS = 1e-9
+
+# ---------------------------------------------------------------------------
+# Auto-suspension state — stale feed detection
+# ---------------------------------------------------------------------------
+
+# match_id → timestamp of last live-price request received
+_last_event_times: Dict[str, datetime] = {}
+
+# Seconds without a new event before markets are auto-suspended
+_STALE_THRESHOLD_S: float = 30.0
 
 
 # ---------------------------------------------------------------------------
@@ -202,6 +212,30 @@ async def live_price(req: LivePriceRequest) -> LivePriceResponse:
     """
     rid = str(uuid.uuid4())
     t0 = time.monotonic()
+
+    # ------------------------------------------------------------------
+    # Auto-suspend check — stale feed detection
+    # ------------------------------------------------------------------
+    now = datetime.now(timezone.utc)
+    last_event = _last_event_times.get(req.match_id)
+    if last_event is not None:
+        stale_seconds = (now - last_event).total_seconds()
+        if stale_seconds > _STALE_THRESHOLD_S:
+            log.warning(
+                "floorball.auto_suspend_triggered match_id=%s sport=floorball stale_seconds=%.1f",
+                req.match_id,
+                stale_seconds,
+            )
+            raise HTTPException(
+                status_code=503,
+                detail={
+                    "match_id": req.match_id,
+                    "suspended": True,
+                    "reason": "feed_timeout",
+                    "stale_seconds": round(stale_seconds, 1),
+                },
+            )
+    _last_event_times[req.match_id] = now
 
     time_remaining_frac = max(0.0, min(1.0, req.time_remaining_seconds / _REGULATION_SECONDS))
     score_diff = req.home_score - req.away_score
