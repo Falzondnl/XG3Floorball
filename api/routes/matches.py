@@ -40,6 +40,16 @@ class PredictRequest(BaseModel):
     competition_level: Optional[int] = Field(None, ge=1, le=5)
     is_playoff: Optional[int] = Field(None, ge=0, le=1)
     custom_totals_line: Optional[float] = Field(None, ge=3.0, le=30.0)
+    # Pinnacle live odds — optional; all three required to activate 80/20 three-way blend
+    pinnacle_home_odds: Optional[float] = Field(
+        None, gt=1.0, le=100.0, description="Pinnacle decimal odds for home win"
+    )
+    pinnacle_draw_odds: Optional[float] = Field(
+        None, gt=1.0, le=100.0, description="Pinnacle decimal odds for draw"
+    )
+    pinnacle_away_odds: Optional[float] = Field(
+        None, gt=1.0, le=100.0, description="Pinnacle decimal odds for away win"
+    )
 
     @field_validator("home_elo", "away_elo")
     @classmethod
@@ -103,11 +113,54 @@ async def predict(body: PredictRequest, request: Request) -> PredictResponse:
         logger.exception("Prediction failed: %s", exc)
         raise HTTPException(status_code=500, detail=f"Prediction error: {exc}") from exc
 
+    # Optional Pinnacle 80/20 three-way logit-space blend
+    home_win_prob = result.home_win_prob
+    draw_prob = result.draw_prob
+    away_win_prob = result.away_win_prob
+    if (
+        body.pinnacle_home_odds is not None
+        and body.pinnacle_draw_odds is not None
+        and body.pinnacle_away_odds is not None
+    ):
+        try:
+            import math as _math
+            _eps = 1e-9
+            vig_total = (
+                1.0 / body.pinnacle_home_odds
+                + 1.0 / body.pinnacle_draw_odds
+                + 1.0 / body.pinnacle_away_odds
+            )
+            pin_home = (1.0 / body.pinnacle_home_odds) / vig_total
+            pin_draw = (1.0 / body.pinnacle_draw_odds) / vig_total
+            pin_away = (1.0 / body.pinnacle_away_odds) / vig_total
+
+            def _logit(p: float) -> float:
+                p = max(_eps, min(1.0 - _eps, p))
+                return _math.log(p / (1.0 - p))
+
+            def _sigmoid(x: float) -> float:
+                return 1.0 / (1.0 + _math.exp(-x))
+
+            raw_home = _sigmoid(0.80 * _logit(home_win_prob) + 0.20 * _logit(pin_home))
+            raw_draw = _sigmoid(0.80 * _logit(draw_prob) + 0.20 * _logit(pin_draw))
+            raw_away = _sigmoid(0.80 * _logit(away_win_prob) + 0.20 * _logit(pin_away))
+            blend_total = raw_home + raw_draw + raw_away
+            home_win_prob = raw_home / blend_total
+            draw_prob = raw_draw / blend_total
+            away_win_prob = raw_away / blend_total
+        except Exception as _blend_exc:
+            logger.warning(
+                "floorball_pinnacle_blend_failed home=%d away=%d error=%s",
+                body.home_team_id,
+                body.away_team_id,
+                _blend_exc,
+            )
+
     try:
         priced = pricer.price(
-            home_win_prob=result.home_win_prob,
-            away_win_prob=result.away_win_prob,
-            draw_prob=result.draw_prob,
+            home_win_prob=home_win_prob,
+            away_win_prob=away_win_prob,
+            draw_prob=draw_prob,
             regime=result.regime,
             model_mode=result.model_mode,
             confidence=result.confidence,
@@ -121,9 +174,9 @@ async def predict(body: PredictRequest, request: Request) -> PredictResponse:
         home_team_id=body.home_team_id,
         away_team_id=body.away_team_id,
         tournament_name=body.tournament_name,
-        home_win_prob=result.home_win_prob,
-        away_win_prob=result.away_win_prob,
-        draw_prob=result.draw_prob,
+        home_win_prob=home_win_prob,
+        away_win_prob=away_win_prob,
+        draw_prob=draw_prob,
         regime=result.regime,
         model_mode=result.model_mode,
         confidence=result.confidence,
