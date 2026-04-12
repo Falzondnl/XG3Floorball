@@ -40,7 +40,7 @@ async def _fetch_fixtures_for_date(date_str: str) -> List[Dict[str, Any]]:
             timeout=httpx.Timeout(20.0, connect=8.0),
         ) as client:
             resp = await client.get(
-                "/v3/fixtures",
+                "/api/v3/fixtures",
                 params={"sport": _SPORT, "date": date_str},
             )
             resp.raise_for_status()
