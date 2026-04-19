@@ -16,6 +16,29 @@ from fastapi.middleware.cors import CORSMiddleware
 from config import PORT, SERVICE_NAME, SERVICE_VERSION
 from ml.predictor import FloorballPredictor
 
+# ---------------------------------------------------------------------------
+# Sentry error monitoring — set SENTRY_DSN env var in Railway to activate
+# ---------------------------------------------------------------------------
+import os as _os_sentry
+_SENTRY_DSN = _os_sentry.getenv("SENTRY_DSN", "")
+if _SENTRY_DSN:
+    try:
+        import sentry_sdk
+        from sentry_sdk.integrations.fastapi import FastApiIntegration
+        from sentry_sdk.integrations.starlette import StarletteIntegration
+        sentry_sdk.init(
+            dsn=_SENTRY_DSN,
+            integrations=[
+                StarletteIntegration(transaction_style="endpoint"),
+                FastApiIntegration(transaction_style="endpoint"),
+            ],
+            traces_sample_rate=float(_os_sentry.getenv("SENTRY_TRACES_SAMPLE_RATE", "0.05")),
+            environment=_os_sentry.getenv("ENVIRONMENT", "production"),
+        )
+        print(f"[Sentry] Initialized for {_os_sentry.getenv('RAILWAY_SERVICE_NAME', 'unknown')}")
+    except ImportError:
+        pass  # sentry-sdk not installed — non-fatal
+
 logger = logging.getLogger(__name__)
 
 logging.basicConfig(
