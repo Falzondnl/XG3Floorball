@@ -57,6 +57,7 @@ async def _fetch_fixtures_for_date(date_str: str) -> List[Dict[str, Any]]:
         return []
 
 
+@router.get("/fixtures", response_model=List[Dict[str, Any]])
 @router.get("/games", response_model=List[Dict[str, Any]])
 @router.get("/games/upcoming", response_model=List[Dict[str, Any]])
 async def list_games(
