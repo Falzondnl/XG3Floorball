@@ -22,6 +22,7 @@ from ml.features import FEATURE_COLUMNS, FloorballFeatureExtractor
 logger = logging.getLogger(__name__)
 
 _ELO_STATE_PATH = MODELS_DIR / "r0" / "elo_state.json"
+_TEAM_NAME_REGISTRY_PATH = MODELS_DIR / "r0" / "team_name_registry.json"
 
 
 def _load_team_elo_state() -> dict[int, float]:
@@ -45,8 +46,61 @@ def _load_team_elo_state() -> dict[int, float]:
         return {}
 
 
-# Module-level singleton — loaded once at import time (same process lifetime as predictor)
+def _load_team_name_registry() -> dict[str, dict]:
+    """Load team name -> {team_id, team_name, elo} registry.
+
+    Enables name-based ELO lookups (lowercase-normalised).
+    Returns empty dict if file not present — callers fall back to team_id-based lookup.
+    """
+    if not _TEAM_NAME_REGISTRY_PATH.exists():
+        logger.warning(
+            "team_name_registry.json not found at %s — name-based ELO lookup unavailable",
+            _TEAM_NAME_REGISTRY_PATH,
+        )
+        return {}
+    try:
+        with open(_TEAM_NAME_REGISTRY_PATH) as fh:
+            data = json.load(fh)
+        registry = data.get("registry", {})
+        logger.info(
+            "Floorball team name registry loaded: %d entries from %s",
+            len(registry),
+            _TEAM_NAME_REGISTRY_PATH,
+        )
+        return registry
+    except Exception as exc:
+        logger.warning("Failed to load team_name_registry.json: %s", exc)
+        return {}
+
+
+# Module-level singletons — loaded once at import time
 _TEAM_ELO: dict[int, float] = _load_team_elo_state()
+_TEAM_NAME_REGISTRY: dict[str, dict] = _load_team_name_registry()
+
+
+def resolve_team_elo_by_name(team_name: str) -> Optional[float]:
+    """Look up a team's ELO by its display name (case-insensitive).
+
+    Returns the ELO float if found in the name registry, else None.
+    Callers should fall back to team_id lookup or ELO_DEFAULT when None.
+    """
+    if not team_name or not _TEAM_NAME_REGISTRY:
+        return None
+    key = team_name.strip().lower()
+    entry = _TEAM_NAME_REGISTRY.get(key)
+    if entry is not None:
+        return float(entry["elo"])
+    # Partial match: try startswith for club names like "IBF Falun" vs "Falun"
+    for reg_key, reg_val in _TEAM_NAME_REGISTRY.items():
+        if reg_key.startswith(key) or key.startswith(reg_key):
+            logger.debug(
+                "team_name_partial_match team=%s matched_as=%s elo=%.1f",
+                team_name,
+                reg_val["team_name"],
+                reg_val["elo"],
+            )
+            return float(reg_val["elo"])
+    return None
 
 
 @dataclass

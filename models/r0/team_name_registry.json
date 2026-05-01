@@ -1,0 +1,1035 @@
+{
+  "registry": {
+    "nokian krp": {
+      "team_id": 25241,
+      "team_name": "Nokian KrP",
+      "elo": 1688.1782
+    },
+    "ibf falun": {
+      "team_id": 117972,
+      "team_name": "IBF Falun",
+      "elo": 1423.7711
+    },
+    "oilers": {
+      "team_id": 4159,
+      "team_name": "Oilers",
+      "elo": 1728.738
+    },
+    "storvreta ibk": {
+      "team_id": 1107327,
+      "team_name": "Storvreta IBK",
+      "elo": 1546.2017
+    },
+    "hc rychenberg winterthur": {
+      "team_id": 7989,
+      "team_name": "HC Rychenberg Winterthur",
+      "elo": 1564.0981
+    },
+    "tatran st\u0159e\u0161ovice": {
+      "team_id": 25902,
+      "team_name": "Tatran St\u0159e\u0161ovice",
+      "elo": 1757.1423
+    },
+    "zug united": {
+      "team_id": 464095,
+      "team_name": "Zug United",
+      "elo": 1703.3139
+    },
+    "technology mlad\u00e1 boleslav": {
+      "team_id": 44609,
+      "team_name": "Technology Mlad\u00e1 Boleslav",
+      "elo": 1867.386
+    },
+    "pixbo wallenstam": {
+      "team_id": 4138,
+      "team_name": "Pixbo Wallenstam",
+      "elo": 1652.8193
+    },
+    "sv wiler-ersigen": {
+      "team_id": 7990,
+      "team_name": "SV Wiler-Ersigen",
+      "elo": 1687.8081
+    },
+    "slovakia": {
+      "team_id": 38973,
+      "team_name": "Slovakia",
+      "elo": 1494.574
+    },
+    "canada": {
+      "team_id": 40236,
+      "team_name": "Canada",
+      "elo": 1402.0877
+    },
+    "slovenia": {
+      "team_id": 555736,
+      "team_name": "Slovenia",
+      "elo": 1491.2037
+    },
+    "switzerland": {
+      "team_id": 7566,
+      "team_name": "Switzerland",
+      "elo": 1576.9029
+    },
+    "czechia": {
+      "team_id": 7556,
+      "team_name": "Czechia",
+      "elo": 1621.0904
+    },
+    "finland": {
+      "team_id": 7558,
+      "team_name": "Finland",
+      "elo": 1610.0047
+    },
+    "germany": {
+      "team_id": 7559,
+      "team_name": "Germany",
+      "elo": 1536.1339
+    },
+    "latvia": {
+      "team_id": 7561,
+      "team_name": "Latvia",
+      "elo": 1443.9551
+    },
+    "australia": {
+      "team_id": 38975,
+      "team_name": "Australia",
+      "elo": 1430.8245
+    },
+    "norway": {
+      "team_id": 7562,
+      "team_name": "Norway",
+      "elo": 1564.8804
+    },
+    "poland": {
+      "team_id": 38971,
+      "team_name": "Poland",
+      "elo": 1456.0273
+    },
+    "philippines": {
+      "team_id": 396683,
+      "team_name": "Philippines",
+      "elo": 1439.1808
+    },
+    "sweden": {
+      "team_id": 7565,
+      "team_name": "Sweden",
+      "elo": 1647.4505
+    },
+    "denmark": {
+      "team_id": 7557,
+      "team_name": "Denmark",
+      "elo": 1472.703
+    },
+    "estonia": {
+      "team_id": 38978,
+      "team_name": "Estonia",
+      "elo": 1494.9754
+    },
+    "thailand": {
+      "team_id": 272741,
+      "team_name": "Thailand",
+      "elo": 1466.7985
+    },
+    "singapore": {
+      "team_id": 7564,
+      "team_name": "Singapore",
+      "elo": 1396.0503
+    },
+    "usa": {
+      "team_id": 7567,
+      "team_name": "USA",
+      "elo": 1398.7898
+    },
+    "netherlands": {
+      "team_id": 38972,
+      "team_name": "Netherlands",
+      "elo": 1481.0934
+    },
+    "japan": {
+      "team_id": 7560,
+      "team_name": "Japan",
+      "elo": 1514.2289
+    },
+    "france": {
+      "team_id": 497276,
+      "team_name": "France",
+      "elo": 1443.4943
+    },
+    "italy": {
+      "team_id": 38974,
+      "team_name": "Italy",
+      "elo": 1444.4233
+    },
+    "russia": {
+      "team_id": 7563,
+      "team_name": "Russia",
+      "elo": 1468.1721
+    },
+    "harstad ibk": {
+      "team_id": 206799,
+      "team_name": "Harstad IBK",
+      "elo": 1414.3435
+    },
+    "ik akerselva": {
+      "team_id": 117616,
+      "team_name": "IK Akerselva",
+      "elo": 1373.3251
+    },
+    "ull/kisa": {
+      "team_id": 342770,
+      "team_name": "Ull/Kisa",
+      "elo": 1306.3924
+    },
+    "nor 92": {
+      "team_id": 4169,
+      "team_name": "Nor 92",
+      "elo": 1552.2554
+    },
+    "valerenga": {
+      "team_id": 328724,
+      "team_name": "Valerenga",
+      "elo": 1281.0925
+    },
+    "sandnes": {
+      "team_id": 206806,
+      "team_name": "Sandnes",
+      "elo": 1398.2787
+    },
+    "sarpsborg ibk": {
+      "team_id": 4172,
+      "team_name": "Sarpsborg IBK",
+      "elo": 1558.0775
+    },
+    "gjellerasen if": {
+      "team_id": 7995,
+      "team_name": "Gjellerasen IF",
+      "elo": 1374.8214
+    },
+    "greaker ibk": {
+      "team_id": 4176,
+      "team_name": "Greaker IBK",
+      "elo": 1702.5941
+    },
+    "slevik ibk": {
+      "team_id": 4174,
+      "team_name": "Slevik IBK",
+      "elo": 1829.4522
+    },
+    "tunet ibk": {
+      "team_id": 4168,
+      "team_name": "Tunet IBK",
+      "elo": 1800.3264
+    },
+    "sveiva ibk": {
+      "team_id": 4170,
+      "team_name": "Sveiva IBK",
+      "elo": 1578.0067
+    },
+    "narvik": {
+      "team_id": 342768,
+      "team_name": "Narvik",
+      "elo": 1433.1775
+    },
+    "ajer": {
+      "team_id": 510065,
+      "team_name": "Ajer",
+      "elo": 1376.9912
+    },
+    "sjetne": {
+      "team_id": 342769,
+      "team_name": "Sjetne",
+      "elo": 1481.3966
+    },
+    "tps turku": {
+      "team_id": 7984,
+      "team_name": "TPS Turku",
+      "elo": 1529.5129
+    },
+    "spv sein\u00e4joki": {
+      "team_id": 6584,
+      "team_name": "SPV Sein\u00e4joki",
+      "elo": 1648.493
+    },
+    "hawks helsinki": {
+      "team_id": 467578,
+      "team_name": "Hawks Helsinki",
+      "elo": 1407.884
+    },
+    "er\u00e4viikingit": {
+      "team_id": 206217,
+      "team_name": "Er\u00e4Viikingit",
+      "elo": 1456.6767
+    },
+    "lasb": {
+      "team_id": 231488,
+      "team_name": "LASB",
+      "elo": 1351.8833
+    },
+    "fbc turku": {
+      "team_id": 448797,
+      "team_name": "FBC Turku",
+      "elo": 1204.5342
+    },
+    "westend indians": {
+      "team_id": 65930,
+      "team_name": "Westend Indians",
+      "elo": 1566.3942
+    },
+    "salibandy club classic": {
+      "team_id": 465200,
+      "team_name": "Salibandy Club Classic",
+      "elo": 1775.1903
+    },
+    "oulun luistinseura": {
+      "team_id": 4165,
+      "team_name": "Oulun Luistinseura",
+      "elo": 1456.076
+    },
+    "nurmon jymy": {
+      "team_id": 362660,
+      "team_name": "Nurmon Jymy",
+      "elo": 1349.1045
+    },
+    "o2 jyvaskyla": {
+      "team_id": 464762,
+      "team_name": "O2 Jyvaskyla",
+      "elo": 1393.2351
+    },
+    "fbt karhut": {
+      "team_id": 25240,
+      "team_name": "FBT Karhut",
+      "elo": 1500.7652
+    },
+    "happee": {
+      "team_id": 4158,
+      "team_name": "Happee",
+      "elo": 1537.8533
+    },
+    "salba": {
+      "team_id": 174868,
+      "team_name": "SalBa",
+      "elo": 1445.4491
+    },
+    "koovee": {
+      "team_id": 464760,
+      "team_name": "Koovee",
+      "elo": 1434.932
+    },
+    "m-team": {
+      "team_id": 49904,
+      "team_name": "M-Team",
+      "elo": 1426.3122
+    },
+    "tikkurilan tiikerit": {
+      "team_id": 328219,
+      "team_name": "Tikkurilan Tiikerit",
+      "elo": 1471.7308
+    },
+    "pss": {
+      "team_id": 465201,
+      "team_name": "Pss",
+      "elo": 1318.9032
+    },
+    "fbc loisto": {
+      "team_id": 464763,
+      "team_name": "FBC Loisto",
+      "elo": 1566.3023
+    },
+    "sb-pro": {
+      "team_id": 465202,
+      "team_name": "SB-Pro",
+      "elo": 1627.7628
+    },
+    "eraviikingit": {
+      "team_id": 465199,
+      "team_name": "Eraviikingit",
+      "elo": 1631.8552
+    },
+    "aaif": {
+      "team_id": 464758,
+      "team_name": "Aaif",
+      "elo": 1351.0115
+    },
+    "tps": {
+      "team_id": 465197,
+      "team_name": "TPS",
+      "elo": 1812.5949
+    },
+    "pirkkalan pirkat": {
+      "team_id": 510423,
+      "team_name": "Pirkkalan Pirkat",
+      "elo": 1431.7159
+    },
+    "northern stars": {
+      "team_id": 1081218,
+      "team_name": "Northern Stars",
+      "elo": 1384.6192
+    },
+    "ssra": {
+      "team_id": 465198,
+      "team_name": "Ssra",
+      "elo": 1591.4477
+    },
+    "saipa": {
+      "team_id": 464761,
+      "team_name": "SaiPa",
+      "elo": 1543.9914
+    },
+    "jokerit": {
+      "team_id": 464756,
+      "team_name": "Jokerit",
+      "elo": 1490.7931
+    },
+    "sb welhot": {
+      "team_id": 490782,
+      "team_name": "SB Welhot",
+      "elo": 1335.9593
+    },
+    "sbs wirmo": {
+      "team_id": 510424,
+      "team_name": "Sbs Wirmo",
+      "elo": 1461.7869
+    },
+    "fb factor": {
+      "team_id": 1081219,
+      "team_name": "FB Factor",
+      "elo": 1454.5909
+    },
+    "blue fox": {
+      "team_id": 1080990,
+      "team_name": "Blue Fox",
+      "elo": 1453.1184
+    },
+    "helsinki united": {
+      "team_id": 510422,
+      "team_name": "Helsinki United",
+      "elo": 1457.5561
+    },
+    "nystars uusikaupunki": {
+      "team_id": 510425,
+      "team_name": "Nystars Uusikaupunki",
+      "elo": 1469.6195
+    },
+    "haukiputaan heitto": {
+      "team_id": 510426,
+      "team_name": "Haukiputaan Heitto",
+      "elo": 1454.5764
+    },
+    "aik": {
+      "team_id": 4142,
+      "team_name": "AIK",
+      "elo": 1505.3456
+    },
+    "v\u00e4xj\u00f6 vipers": {
+      "team_id": 34558,
+      "team_name": "V\u00e4xj\u00f6 Vipers",
+      "elo": 1713.0456
+    },
+    "str\u00e4ngn\u00e4s ibk": {
+      "team_id": 205610,
+      "team_name": "Str\u00e4ngn\u00e4s IBK",
+      "elo": 1551.5656
+    },
+    "warbergs ic": {
+      "team_id": 4146,
+      "team_name": "Warbergs IC",
+      "elo": 1600.9321
+    },
+    "mullsj\u00f6 ais": {
+      "team_id": 24122,
+      "team_name": "Mullsj\u00f6 AIS",
+      "elo": 1621.948
+    },
+    "hovslatts ik": {
+      "team_id": 448794,
+      "team_name": "Hovslatts IK",
+      "elo": 1516.0216
+    },
+    "visby ibk": {
+      "team_id": 205613,
+      "team_name": "Visby IBK",
+      "elo": 1599.0354
+    },
+    "j\u00f6nk\u00f6pings ik": {
+      "team_id": 4143,
+      "team_name": "J\u00f6nk\u00f6pings IK",
+      "elo": 1538.1895
+    },
+    "link\u00f6ping ibk": {
+      "team_id": 41254,
+      "team_name": "Link\u00f6ping IBK",
+      "elo": 1622.0792
+    },
+    "fbc kalmarsund": {
+      "team_id": 216356,
+      "team_name": "FBC Kalmarsund",
+      "elo": 1646.2848
+    },
+    "nykvarns ibf ungdom": {
+      "team_id": 328707,
+      "team_name": "Nykvarns IBF Ungdom",
+      "elo": 1556.1064
+    },
+    "ibk dalen": {
+      "team_id": 117974,
+      "team_name": "IBK Dalen",
+      "elo": 1349.2186
+    },
+    "team thorengruppen sk": {
+      "team_id": 118116,
+      "team_name": "Team Thorengruppen SK",
+      "elo": 1420.4005
+    },
+    "fc helsingborg": {
+      "team_id": 5744,
+      "team_name": "FC Helsingborg",
+      "elo": 1454.7733
+    },
+    "karlstad ibf": {
+      "team_id": 117982,
+      "team_name": "Karlstad IBF",
+      "elo": 1431.6879
+    },
+    "hagunda if": {
+      "team_id": 266306,
+      "team_name": "Hagunda IF",
+      "elo": 1502.6787
+    },
+    "thorengruppen ibk": {
+      "team_id": 362897,
+      "team_name": "Thorengruppen IBK",
+      "elo": 1814.6148
+    },
+    "pixbo wallenstam ibk": {
+      "team_id": 117984,
+      "team_name": "Pixbo Wallenstam IBK",
+      "elo": 1806.3442
+    },
+    "vaxjo ibk": {
+      "team_id": 1107328,
+      "team_name": "Vaxjo IBK",
+      "elo": 1429.091
+    },
+    "malm\u00f6 fbc": {
+      "team_id": 146502,
+      "team_name": "Malm\u00f6 FBC",
+      "elo": 1449.787
+    },
+    "endre if": {
+      "team_id": 117966,
+      "team_name": "Endre IF",
+      "elo": 1545.7769
+    },
+    "r\u00f6nnby ibk": {
+      "team_id": 117986,
+      "team_name": "R\u00f6nnby IBK",
+      "elo": 1667.3544
+    },
+    "t\u00e4by fc ibk": {
+      "team_id": 117990,
+      "team_name": "T\u00e4by FC IBK",
+      "elo": 1675.0364
+    },
+    "fbc partille": {
+      "team_id": 1107329,
+      "team_name": "FBC Partille",
+      "elo": 1299.076
+    },
+    "warberg ic": {
+      "team_id": 216357,
+      "team_name": "Warberg IC",
+      "elo": 1406.9699
+    },
+    "ibk lund elit": {
+      "team_id": 448795,
+      "team_name": "IBK Lund Elit",
+      "elo": 1581.6107
+    },
+    "kais mora if": {
+      "team_id": 117980,
+      "team_name": "Kais Mora IF",
+      "elo": 1366.698
+    },
+    "telge sibk": {
+      "team_id": 146504,
+      "team_name": "Telge SIBK",
+      "elo": 1302.848
+    },
+    "ibk lockerud mariestad": {
+      "team_id": 485706,
+      "team_name": "IBK Lockerud Mariestad",
+      "elo": 1306.7402
+    },
+    "akersberga ibf": {
+      "team_id": 448866,
+      "team_name": "Akersberga IBF",
+      "elo": 1421.1396
+    },
+    "ik sirius ibk": {
+      "team_id": 34559,
+      "team_name": "IK Sirius IBK",
+      "elo": 1546.2838
+    },
+    "ibf falun utveckling": {
+      "team_id": 449719,
+      "team_name": "IBF Falun Utveckling",
+      "elo": 1477.2736
+    },
+    "bele barkarby if ibf": {
+      "team_id": 328709,
+      "team_name": "Bele Barkarby IF IBF",
+      "elo": 1502.3352
+    },
+    "djurg\u00e5rdens if": {
+      "team_id": 172094,
+      "team_name": "Djurg\u00e5rdens IF",
+      "elo": 1494.6526
+    },
+    "skalby ibk": {
+      "team_id": 485710,
+      "team_name": "Skalby IBK",
+      "elo": 1536.2043
+    },
+    "rig umea ibf": {
+      "team_id": 298145,
+      "team_name": "Rig Umea Ibf",
+      "elo": 1413.3217
+    },
+    "tyreso trollbacken ibk": {
+      "team_id": 34560,
+      "team_name": "Tyreso Trollbacken IBK",
+      "elo": 1479.6475
+    },
+    "alvsjo aik ibf": {
+      "team_id": 448796,
+      "team_name": "Alvsjo AIK IBF",
+      "elo": 1345.9607
+    },
+    "sundsvall fbc": {
+      "team_id": 328711,
+      "team_name": "Sundsvall FBC",
+      "elo": 1579.4262
+    },
+    "g\u00e4vle gik": {
+      "team_id": 7147,
+      "team_name": "G\u00e4vle GIK",
+      "elo": 1477.4412
+    },
+    "hudik/bjorkberg ibk": {
+      "team_id": 205611,
+      "team_name": "Hudik/Bjorkberg IBK",
+      "elo": 1383.947
+    },
+    "fbi tullinge": {
+      "team_id": 266308,
+      "team_name": "FBI Tullinge",
+      "elo": 1401.5121
+    },
+    "salems if": {
+      "team_id": 172096,
+      "team_name": "Salems IF",
+      "elo": 1473.2651
+    },
+    "onyx ibk": {
+      "team_id": 231645,
+      "team_name": "Onyx IBK",
+      "elo": 1387.8951
+    },
+    "taby fc": {
+      "team_id": 118142,
+      "team_name": "Taby FC",
+      "elo": 1438.0249
+    },
+    "ik satra": {
+      "team_id": 362901,
+      "team_name": "IK Satra",
+      "elo": 1322.9296
+    },
+    "fbc kalmarsund youth": {
+      "team_id": 485707,
+      "team_name": "FBC Kalmarsund Youth",
+      "elo": 1376.4683
+    },
+    "h\u00f6llvikens ibf": {
+      "team_id": 118128,
+      "team_name": "H\u00f6llvikens IBF",
+      "elo": 1541.1543
+    },
+    "partille ibs": {
+      "team_id": 118136,
+      "team_name": "Partille Ibs",
+      "elo": 1510.5345
+    },
+    "fbc lerum": {
+      "team_id": 172102,
+      "team_name": "FBC Lerum",
+      "elo": 1514.3396
+    },
+    "fristads goif": {
+      "team_id": 485709,
+      "team_name": "Fristads Goif",
+      "elo": 1300.7387
+    },
+    "fagerhult habo ibk": {
+      "team_id": 118112,
+      "team_name": "Fagerhult Habo IBK",
+      "elo": 1512.3509
+    },
+    "nilsby ik": {
+      "team_id": 485708,
+      "team_name": "Nilsby IK",
+      "elo": 1436.2292
+    },
+    "lill\u00e5n ibk": {
+      "team_id": 118138,
+      "team_name": "Lill\u00e5n IBK",
+      "elo": 1501.1268
+    },
+    "skoghalls ibk": {
+      "team_id": 172100,
+      "team_name": "Skoghalls IBK",
+      "elo": 1436.6027
+    },
+    "malmo fbc": {
+      "team_id": 118134,
+      "team_name": "Malmo FBC",
+      "elo": 1332.9364
+    },
+    "lind\u00e5s waves ibk": {
+      "team_id": 118140,
+      "team_name": "Lind\u00e5s Waves IBK",
+      "elo": 1524.3361
+    },
+    "aby ibk": {
+      "team_id": 118108,
+      "team_name": "Aby IBK",
+      "elo": 1385.2318
+    },
+    "warberg ibf": {
+      "team_id": 391209,
+      "team_name": "Warberg IBF",
+      "elo": 1630.5147
+    },
+    "astorp/kvidinge ibs": {
+      "team_id": 172104,
+      "team_name": "Astorp/Kvidinge IBS",
+      "elo": 1311.4757
+    },
+    "ibf orebro": {
+      "team_id": 118122,
+      "team_name": "IBF Orebro",
+      "elo": 1433.3907
+    },
+    "lagan ibk": {
+      "team_id": 298148,
+      "team_name": "Lagan Ibk",
+      "elo": 1471.718
+    },
+    "v\u00e4steras ibf": {
+      "team_id": 7148,
+      "team_name": "V\u00e4steras IBF",
+      "elo": 1301.2059
+    },
+    "vetlanda ibf": {
+      "team_id": 1107326,
+      "team_name": "Vetlanda IBF",
+      "elo": 1464.2203
+    },
+    "hasselby sk ibk": {
+      "team_id": 556006,
+      "team_name": "Hasselby SK IBK",
+      "elo": 1423.8405
+    },
+    "tigers langnau": {
+      "team_id": 7991,
+      "team_name": "Tigers Langnau",
+      "elo": 1595.1865
+    },
+    "grasshopper club z\u00fcrich": {
+      "team_id": 7988,
+      "team_name": "Grasshopper Club Z\u00fcrich",
+      "elo": 1479.2601
+    },
+    "floorball k\u00f6niz": {
+      "team_id": 7987,
+      "team_name": "Floorball K\u00f6niz",
+      "elo": 1533.759
+    },
+    "uhc alligator malans": {
+      "team_id": 7992,
+      "team_name": "UHC Alligator Malans",
+      "elo": 1433.0869
+    },
+    "unihockey basel regio": {
+      "team_id": 312482,
+      "team_name": "Unihockey Basel Regio",
+      "elo": 1347.7597
+    },
+    "chur unihockey": {
+      "team_id": 1110061,
+      "team_name": "Chur Unihockey",
+      "elo": 1584.1347
+    },
+    "uhc waldkirch st. gallen": {
+      "team_id": 22049,
+      "team_name": "UHC Waldkirch St. Gallen",
+      "elo": 1306.8321
+    },
+    "floorball thurgau": {
+      "team_id": 146822,
+      "team_name": "Floorball Thurgau",
+      "elo": 1584.7403
+    },
+    "uhc uster": {
+      "team_id": 7994,
+      "team_name": "UHC Uster",
+      "elo": 1470.193
+    },
+    "obwalden": {
+      "team_id": 466625,
+      "team_name": "Obwalden",
+      "elo": 1445.4441
+    },
+    "ticino floorball": {
+      "team_id": 1082631,
+      "team_name": "Ticino Floorball",
+      "elo": 1431.2235
+    },
+    "uhc thun": {
+      "team_id": 34661,
+      "team_name": "UHC Thun",
+      "elo": 1442.3932
+    },
+    "uhc laupen": {
+      "team_id": 464094,
+      "team_name": "Uhc Laupen",
+      "elo": 1504.4223
+    },
+    "fb riders dbr": {
+      "team_id": 464118,
+      "team_name": "FB Riders Dbr",
+      "elo": 1358.5232
+    },
+    "kloten-dietlikon jets": {
+      "team_id": 464097,
+      "team_name": "Kloten-Dietlikon Jets",
+      "elo": 1755.9285
+    },
+    "unihockey berner oberland": {
+      "team_id": 464096,
+      "team_name": "Unihockey Berner Oberland",
+      "elo": 1447.7582
+    },
+    "wizards bern burgdorf": {
+      "team_id": 464092,
+      "team_name": "Wizards Bern Burgdorf",
+      "elo": 1588.6864
+    },
+    "floorball uri": {
+      "team_id": 1083364,
+      "team_name": "Floorball Uri",
+      "elo": 1343.831
+    },
+    "skorpion emmental zollbruck": {
+      "team_id": 464093,
+      "team_name": "Skorpion Emmental Zollbruck",
+      "elo": 1596.659
+    },
+    "red ants rychenberg winterthur": {
+      "team_id": 464098,
+      "team_name": "Red Ants Rychenberg Winterthur",
+      "elo": 1360.9875
+    },
+    "uhc waldkirch st gallen": {
+      "team_id": 464119,
+      "team_name": "Uhc Waldkirch St Gallen",
+      "elo": 1327.7376
+    },
+    "piranha chur": {
+      "team_id": 464091,
+      "team_name": "Piranha Chur",
+      "elo": 1520.571
+    },
+    "aergera giffers": {
+      "team_id": 467896,
+      "team_name": "Aergera Giffers",
+      "elo": 1352.7521
+    },
+    "kanonyri kladno": {
+      "team_id": 44606,
+      "team_name": "Kanonyri Kladno",
+      "elo": 1502.5243
+    },
+    "fbs hattrick brno": {
+      "team_id": 68632,
+      "team_name": "Fbs Hattrick Brno",
+      "elo": 1418.9196
+    },
+    "florbal \u00fast\u00ed": {
+      "team_id": 264972,
+      "team_name": "Florbal \u00dast\u00ed",
+      "elo": 1325.2114
+    },
+    "1. sc tempish v\u00edtkovice": {
+      "team_id": 37852,
+      "team_name": "1. SC TEMPISH V\u00edtkovice",
+      "elo": 1562.8857
+    },
+    "sokol kral vinohrady": {
+      "team_id": 173258,
+      "team_name": "Sokol Kral Vinohrady",
+      "elo": 1382.6729
+    },
+    "sokol pardubice": {
+      "team_id": 44611,
+      "team_name": "Sokol Pardubice",
+      "elo": 1417.1099
+    },
+    "fat pipe florbal chodov": {
+      "team_id": 44614,
+      "team_name": "FAT PIPE Florbal Chodov",
+      "elo": 1587.4916
+    },
+    "fbc 4clean \u010desk\u00e1 l\u00edpa": {
+      "team_id": 252656,
+      "team_name": "FBC 4CLEAN \u010cesk\u00e1 L\u00edpa",
+      "elo": 1418.3776
+    },
+    "fbs bohemians": {
+      "team_id": 44610,
+      "team_name": "FbS Bohemians",
+      "elo": 1684.4159
+    },
+    "acema sparta praha": {
+      "team_id": 44604,
+      "team_name": "ACEMA Sparta Praha",
+      "elo": 1657.6746
+    },
+    "fbc bystron group ostrava": {
+      "team_id": 44608,
+      "team_name": "FBC Bystron Group Ostrava",
+      "elo": 1439.0941
+    },
+    "fbc liberec": {
+      "team_id": 44607,
+      "team_name": "FBC Liberec",
+      "elo": 1441.4501
+    },
+    "itelligence bulldogs brno": {
+      "team_id": 44605,
+      "team_name": "itelligence Bulldogs Brno",
+      "elo": 1305.926
+    },
+    "fb hurrican karlovy vary": {
+      "team_id": 448704,
+      "team_name": "FB Hurrican Karlovy Vary",
+      "elo": 1415.107
+    },
+    "black angels": {
+      "team_id": 328744,
+      "team_name": "Black Angels",
+      "elo": 1436.2552
+    },
+    "buchis": {
+      "team_id": 484395,
+      "team_name": "Buchis",
+      "elo": 1315.2713
+    },
+    "copenhagen fc": {
+      "team_id": 118848,
+      "team_name": "Copenhagen FC",
+      "elo": 1518.0961
+    },
+    "hvidovre attack": {
+      "team_id": 175896,
+      "team_name": "Hvidovre Attack",
+      "elo": 1387.5709
+    },
+    "aab floorball": {
+      "team_id": 118854,
+      "team_name": "AaB Floorball",
+      "elo": 1688.0298
+    },
+    "\u00e5rhus fs floorball": {
+      "team_id": 175894,
+      "team_name": "\u00c5rhus FS Floorball",
+      "elo": 1317.6845
+    },
+    "frederikshavn blackhawks": {
+      "team_id": 118856,
+      "team_name": "Frederikshavn Blackhawks",
+      "elo": 1617.7289
+    },
+    "esbjerg sharks fc": {
+      "team_id": 337793,
+      "team_name": "Esbjerg Sharks FC",
+      "elo": 1349.5099
+    },
+    "benl\u00f8se fc": {
+      "team_id": 118846,
+      "team_name": "Benl\u00f8se FC",
+      "elo": 1576.7885
+    },
+    "sunds seahawks fc": {
+      "team_id": 118858,
+      "team_name": "Sunds Seahawks FC",
+      "elo": 1633.1806
+    },
+    "rungsted-hoersholm fk": {
+      "team_id": 337792,
+      "team_name": "Rungsted-Hoersholm FK",
+      "elo": 1562.5557
+    },
+    "alliancen copenhagen 1": {
+      "team_id": 556008,
+      "team_name": "Alliancen Copenhagen 1",
+      "elo": 1709.9758
+    },
+    "r\u00f8dovre fc": {
+      "team_id": 37856,
+      "team_name": "R\u00f8dovre FC",
+      "elo": 1468.6514
+    },
+    "ak akademi u23": {
+      "team_id": 1117729,
+      "team_name": "AK Akademi U23",
+      "elo": 1433.0794
+    },
+    "vanl\u00f8se floorball": {
+      "team_id": 118850,
+      "team_name": "Vanl\u00f8se Floorball",
+      "elo": 1509.7375
+    },
+    "bronderslev fc hot shots": {
+      "team_id": 118852,
+      "team_name": "Bronderslev FC Hot Shots",
+      "elo": 1465.2532
+    },
+    "strandby elling if": {
+      "team_id": 251696,
+      "team_name": "Strandby Elling IF",
+      "elo": 1339.4236
+    },
+    "bronderslev fk": {
+      "team_id": 491716,
+      "team_name": "Bronderslev FK",
+      "elo": 1484.7338
+    },
+    "odense fc": {
+      "team_id": 373193,
+      "team_name": "Odense FC",
+      "elo": 1394.7621
+    },
+    "rangers": {
+      "team_id": 379244,
+      "team_name": "Rangers",
+      "elo": 1500.0
+    },
+    "lnm": {
+      "team_id": 467581,
+      "team_name": "LNM",
+      "elo": 1500.0
+    }
+  },
+  "n_teams": 206
+}
