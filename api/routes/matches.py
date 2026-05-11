@@ -70,6 +70,7 @@ class PredictResponse(BaseModel):
     model_mode: str
     confidence: str
     markets: dict
+    prediction_source: str = "ml_ensemble"
 
 
 # ---------------------------------------------------------------------------
@@ -181,6 +182,7 @@ async def predict(body: PredictRequest, request: Request) -> PredictResponse:
         model_mode=result.model_mode,
         confidence=result.confidence,
         markets=priced.to_dict()["markets"],
+        prediction_source="ml_ensemble",
     )
 
 
